@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Dinámico</title>
+    <title>Base datos</title>
     <link rel="stylesheet" href="css/Style.css">
     <script>
         function mostrarContenido(contenidoId) {
@@ -37,44 +37,89 @@
             <p>Contenido de la página de inicio...</p>
         </div>
         <div class="container contenido" id="productos" style="display: none;">
-            <h2>Crear Producto</h2>
-            <form action="CrearProductoServlet" method="post">
-                
-                
-                  <div class="form-group">
-                    <label for="nombreProducto">Nombre del Producto:</label>
-                    <input type="text" id="nombreProducto" name="nombreProducto" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="precio">Precio:</label>
-                    <input type="number" id="precio" name="precio" step="0.01" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="categoria">Categoría:</label>
-                    <input type="text" id="categoria" name="categoria" required>
-                </div>
-                
-                <button type="submit">Crear Producto</button>
-            </form>
+<h2>Crear Producto</h2>
+<div class="card">
+    <form action="CrearProductoServlet" method="post">
+        <div class="form-group">
+            <label for="idProducts">Codigo de producto:</label>
+            <input type="number" id="idProducts" name="idProducts" required>
         </div>
-                <!-- Contenido del formulario de creación de productos -->
-            </form>
+        
+        <div class="form-group">
+            <label for="nombreProducto">Nombre del Producto:</label>
+            <input type="text" id="nombreProducto" name="nombreProducto" required>
         </div>
-        <div class="container contenido" id="categorias" style="display: none;">
-            <h2>Lista de Categorías</h2>
-            <p>Contenido de la lista de categorías...</p>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
         </div>
-        <div class="container contenido" id="configuraciones" style="display: none;">
-            <h2>Configuraciones</h2>
-            <p>Contenido de las configuraciones...</p>
+        
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
         </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" required>
+        </div>
+        
+        <button type="submit">Crear Producto</button>
+    </form>
+    
+  
+    <h2>Gestionar Producto</h2>
+    <form action="editarybuscarServlet" method="post">
+        <div class="form-group">
+            <label for="idProducts">Codigo de producto:</label>
+            <input type="number" id="idProducts" name="idProducts" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nombreProducto">Nombre del Producto:</label>
+            <input type="text" id="nombreProducto" name="nombreProducto">
+        </div>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01">
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria">
+        </div>
+        
+        <button type="submit" name="action" value="buscar">Buscar</button>
+        <button type="submit" name="action" value="editar">Editar</button>
+        <button type="submit" name="action" value="eliminar">Eliminar</button>
+    </form>
+    
+    
+    
+    
+
+
+</div>
+
+            
+            
+            
+            
+            
+   
+
+ 
+        
+        
+  <!-- Contenido del formulario de creación de productos -->
+            
     </div>
 </body>
 </html>

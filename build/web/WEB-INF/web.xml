@@ -4,8 +4,24 @@
         <servlet-name>CrearProductoServlet</servlet-name>
         <servlet-class>Servlet.CrearProductoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GestionProductosServlet</servlet-name>
+        <servlet-class>Servlet.GestionProductosServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Editarybuscar</servlet-name>
+        <servlet-class>Servlet.editarybuscarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CrearProductoServlet</servlet-name>
         <url-pattern>/CrearProductoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GestionProductosServlet</servlet-name>
+        <url-pattern>/GestionProductosServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Editarybuscar</servlet-name>
+        <url-pattern>/Editarybuscar</url-pattern>
     </servlet-mapping>
 </web-app>
